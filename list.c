@@ -106,14 +106,18 @@ void * popCurrent(List * list) {
     Node *copia = list->current->data;
     if(list->current == list->tail)
     {
-      list->tail = list->current->prev;
+      list->tail = list->tail->prev;
       list->tail->next = NULL;
     }
+  
+  
     if(list->current == list->head)
     {
-      list->head = list->current->next;
+      list->head = list->head->next;
       list->head->prev = NULL;
     }
+
+    list->current = list->current->next;
   
     return copia;
 }
