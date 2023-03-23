@@ -126,7 +126,7 @@ void * popCurrent(List * list) {
     }
 
     
-    list->current = list->current->next;
+    
   
     return copia;
 }
